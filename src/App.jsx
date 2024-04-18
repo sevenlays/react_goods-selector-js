@@ -18,10 +18,6 @@ export const goods = [
 export const App = () => {
   const [value, setValue] = useState('Jam');
 
-  const selectClick = good => {
-    setValue(good);
-  };
-
   const clearClick = () => {
     setValue('');
   };
@@ -50,7 +46,7 @@ export const App = () => {
               <td>
                 {value !== good ? (
                   <button
-                    onClick={() => selectClick(good)}
+                    onClick={() => setValue(good)}
                     data-cy="AddButton"
                     type="button"
                     className="button"
